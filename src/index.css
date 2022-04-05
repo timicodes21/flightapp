@@ -110,3 +110,19 @@ a{
   border: none;
 }
 
+.login-input{
+  box-shadow: none !important;
+}
+
+.login-input::placeholder{
+  color: #676767;
+  font-size: 16px;
+}
+
+.login-input:focus{
+  border: 1px solid #D05663 !important;
+}
+
+.bor2{
+  border: 1px solid #2A403D;
+}

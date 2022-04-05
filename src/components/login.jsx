@@ -1,57 +1,47 @@
 import React from 'react'
+import { Form, Row, Container, Image } from 'react-bootstrap';
+import usePasswordShow from '../hooks/usePasswordShow'
+import { Link } from "react-router-dom"
+import Image2 from "../assets/image2.jpg"
 
 const Login = () => {
+    const { passwordShow, showPassword } = usePasswordShow();
   return (
-    <div>
-        <Form onSubmit={handleSubmit}>
-            <div className="d-flex justify-content-end my-3">
-                <GrClose onClick={handleClose2} className="text-orange close-icon" />
-            </div>
-            <div className="text-center mt-5">
-                <h4 className="font-700 font-28 text-dark">Share your amazing story!</h4>
-            </div>
-            <Row>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Label><p className="font-14 text-ashhhh pt-1 font-400 roboto">Upload your picture</p></Form.Label>
-                    <Form.Control value={image} onChange={e => setImage(e.target.value)} className="story-input p-3" type="file" placeholder="Choose image" />
-                </Form.Group>
-            </Row>
-            <Row>
+    <Container className="p-5">
+        <div className='my-2 text-center'>
+            <p className='font-32 text-agreen fst-italic font-500'>Login to your account</p>
+        </div>
+        <Form>
+            <Row className="my-5">
                 <div className="col-12 col-md-6">
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                        <Form.Label><p className="font-14 text-ashhhh pt-1 font-400 roboto">First Name</p></Form.Label>
-                        <Form.Control required value={firstName} onChange={e => setFirstName(e.target.value)} className="story-input p-3" type="text" placeholder="" />
-                    </Form.Group>
+                    <Row>
+                        <div className="col-12">
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label><p className="font-14 text-green pt-1 font-500">Email Address</p></Form.Label>
+                                <Form.Control required className="login-input p-3" type="email" placeholder="email" />
+                            </Form.Group>
+                        </div>
+                        <div className="col-12">
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label><p className="font-14 text-green pt-1 font-500">Password</p></Form.Label>
+                                <Form.Control required className="login-input p-3" type={passwordShow ? "text" : "password"} placeholder="password" />
+                            </Form.Group>
+                            <Form.Group className="mb-3 font-14 text-green pt-1 font-500" controlId="formBasicCheckbox">
+                                <Form.Check type="checkbox" className="font-15" onClick={showPassword} label="show password" />
+                            </Form.Group>
+                        </div>
+                        <div className="col-12 mt-3">
+                            <button type="submit" className="font-20 w-100 font-600 text-white bg-agreen rounded p-2 bor2">Login</button>
+                        </div>
+                        <p className="font-15 font-400 text-center text-agreen pt-3">Don't have an account? <Link to="/sign-up" className="font-16 mt-4 pt-2 font-500 text-pink">Sign Up</Link></p>
+                    </Row>
                 </div>
-                <div className="col-12 col-md-6">
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                        <Form.Label><p className="font-14 text-ashhhh pt-1 font-400 roboto">Last Name</p></Form.Label>
-                        <Form.Control required value={lastName} onChange={e => setLastName(e.target.value)} className="story-input p-3" type="text" placeholder="" />
-                    </Form.Group>
+                <div className="col-12 col-md-6 d-none d-md-block">
+                    <Image src={Image2} className="rounded" fluid />
                 </div>
-            </Row>
-            <Row>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Label><p className="font-14 text-ashhhh pt-1 font-400 roboto">Share your story</p></Form.Label>
-                    <Form.Control required value={story} onChange={e => setStory(e.target.value)} className="story-input" as="textarea" rows={3} />
-                </Form.Group>
-            </Row>
-            <Row>
-                <div className="col-12 col-md-4">
-                    <p className="font-14 text-ashhhh pt-1 font-400 roboto">What did you interact with Vasiti as?</p>
-                </div>
-                <div className="col-6 col-md-4">
-                    <input type="radio" id="customer" checked name="category" value="customer" onChange={e => setCategory(e.target.value)} />
-                    <label for="customer"><p className="font-14 text-ashhhh pt-1 ps-1 font-400 roboto">Customer</p></label>
-                </div>
-                <div className="col-6 col-md-4">
-                    <input type="radio" id="vendor" name="category" value="vendor" onChange={e => setCategory(e.target.value)} />
-                    <label for="vendor"><p className="font-14 text-ashhhh pt-1 ps-1 font-400 roboto">Vendor</p></label>
-                </div>
-                
             </Row>
         </Form>
-    </div>
+    </Container>
   )
 }
 
