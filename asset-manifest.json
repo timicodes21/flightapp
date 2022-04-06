@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/flightapp/static/css/main.ce53b6ba.css",
-    "main.js": "/flightapp/static/js/main.5c656af9.js",
+    "main.js": "/flightapp/static/js/main.2370065b.js",
     "static/js/787.d66b4310.chunk.js": "/flightapp/static/js/787.d66b4310.chunk.js",
     "static/media/image1.jpg": "/flightapp/static/media/image1.2280a5156b44fc1cad8f.jpg",
     "static/media/image2.jpg": "/flightapp/static/media/image2.494638ab2a309b786624.jpg",
     "index.html": "/flightapp/index.html",
     "main.ce53b6ba.css.map": "/flightapp/static/css/main.ce53b6ba.css.map",
-    "main.5c656af9.js.map": "/flightapp/static/js/main.5c656af9.js.map",
+    "main.2370065b.js.map": "/flightapp/static/js/main.2370065b.js.map",
     "787.d66b4310.chunk.js.map": "/flightapp/static/js/787.d66b4310.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ce53b6ba.css",
-    "static/js/main.5c656af9.js"
+    "static/js/main.2370065b.js"
   ]
 }
