@@ -11,11 +11,12 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  console.log(moment(1517184000).format('MMMM Do YYYY, h:mm:ss a'))
-  console.log(Date.now())
   // Ajax call
   useEffect(() => {
-    const endPoint = 'https://developertimi:Babalola@1@opensky-network.org/api/flights/all?begin=1517184000&end=1517188000'
+    // To get the latest flight details from the api
+    const startDate = (Math.floor((Date.now()) / 1000)) - 100000
+    const endDate = startDate + 3000;
+    const endPoint = `https://developertimi:Babalola@1@opensky-network.org/api/flights/all?begin=${startDate}&end=${endDate}`
     axios.get(endPoint)
       .then(response => {
         setLoading(false);
@@ -70,9 +71,9 @@ const Dashboard = () => {
                   </div>
                 </div>
                 {data.map(flight => (
-                  <div className="col-12 col-md-3 mt-2">
+                  <div key={data.indexOf(flight)} className="col-12 col-md-3 mt-2">
                     <div className="shadow-sm p-3 bg-light">
-                      <p className="text-agreen font-14 font-700">{ flight.icao24 } | { moment(Date.now()).format('h:mm:ss a') } | { moment(flight.firstSeen).format('h:mm:ss a') } | { moment(flight.lastSeen).format('h:mm:ss a') }</p>
+                      <p className="text-agreen font-14 font-700">{ flight.icao24 } | { moment(Date.now()).format('h:mm:ss a') } | { moment(flight.firstSeen * 1000).format('h:mm:ss a') } | { moment(flight.lastSeen * 1000).format('h:mm:ss a') }</p>
                     </div>
                   </div>
                 ))}
