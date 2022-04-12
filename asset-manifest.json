@@ -1,17 +1,19 @@
 {
   "files": {
     "main.css": "/flightapp/static/css/main.ce53b6ba.css",
-    "main.js": "/flightapp/static/js/main.2370065b.js",
+    "main.js": "/flightapp/static/js/main.f0e9e1b5.js",
     "static/js/787.d66b4310.chunk.js": "/flightapp/static/js/787.d66b4310.chunk.js",
     "static/media/image1.jpg": "/flightapp/static/media/image1.2280a5156b44fc1cad8f.jpg",
     "static/media/image2.jpg": "/flightapp/static/media/image2.494638ab2a309b786624.jpg",
+    "static/media/errorImg.png": "/flightapp/static/media/errorImg.029045d023e12e426825.png",
+    "static/media/spinner.gif": "/flightapp/static/media/spinner.cd1a8bac752396ce7d13.gif",
     "index.html": "/flightapp/index.html",
     "main.ce53b6ba.css.map": "/flightapp/static/css/main.ce53b6ba.css.map",
-    "main.2370065b.js.map": "/flightapp/static/js/main.2370065b.js.map",
+    "main.f0e9e1b5.js.map": "/flightapp/static/js/main.f0e9e1b5.js.map",
     "787.d66b4310.chunk.js.map": "/flightapp/static/js/787.d66b4310.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ce53b6ba.css",
-    "static/js/main.2370065b.js"
+    "static/js/main.f0e9e1b5.js"
   ]
 }
