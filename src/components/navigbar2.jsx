@@ -3,11 +3,11 @@ import { Nav, Navbar, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const Navigbar2 = ({ link, page }) => {
-    
+   
   return (
     <Navbar bg="light" expand="lg">
         <Container>
-            <Navbar.Brand href="#"><p className='font-32 text-pink fst-italic font-500'>Fly Better</p></Navbar.Brand>
+            <Navbar.Brand><p className='font-32 text-pink fst-italic font-500'><Link className="text-pink" to="/">Fly Better</Link></p></Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
                 <Nav className="ms-auto my-2 pt-md-2 pb-md-1 my-lg-0">

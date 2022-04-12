@@ -5,14 +5,6 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
-/* .home{
-  background: linear-gradient(to bottom right, rgba(195,203,214,0.99),rgba(195,203,214,0.8)),url(./assets/wallpaper.jpg);
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
-
 .bg-pink{
   background-color: #D05663;
 }
